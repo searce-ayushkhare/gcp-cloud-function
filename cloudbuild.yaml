@@ -1,0 +1,25 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - inputLogger
+      - --region=us-central1
+      - --source=.
+      - --entry-point=org.example.HelloWorld
+      - --trigger-http
+      - --runtime=java17
+      - --allow-unauthenticated
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - inputLogsReader
+      - --region=us-central1
+      - --source=.
+      - --entry-point=org.example.NamasteDunia
+      - --trigger-http
+      - --runtime=java17
+      - --allow-unauthenticated

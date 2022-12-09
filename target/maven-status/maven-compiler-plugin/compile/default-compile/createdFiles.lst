@@ -1,2 +1,5 @@
 org/example/NamasteDunia.class
+org/utils/ConfigUtils.class
 org/example/HelloWorld.class
+org/example/IntegrationRequest$IntegrationRequestBuilder.class
+org/example/IntegrationRequest.class
